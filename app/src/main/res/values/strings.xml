@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Accessibility</string>
+    <string name="app_name">Acessibilidade</string>
+    <string name="login_button_text">Login</string>
+    <string name="login_button_desc">login</string>
+    <string name="login_introduction">Aumentando o escopo \ndo seu app</string>
+    <string name="login_constrast_switch">Contraste</string>
 </resources>
