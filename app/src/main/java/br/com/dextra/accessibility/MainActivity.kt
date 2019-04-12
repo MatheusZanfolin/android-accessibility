@@ -1,5 +1,6 @@
 package br.com.dextra.accessibility
 
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.Drawable
@@ -20,14 +21,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         setDefaultTextColors()
-        setupSwitch()
+        setupScreenComponents()
     }
 
     private fun setDefaultTextColors() {
         defaultTitleColor = binding.loginAppNameText.textColors
         defaultIntroductionColor = binding.loginIntroductionText.textColors
         defaultSwitchTextColor = binding.contrastSwitchText.textColors
-        defaultButtonTextColor = binding.loginButton.textColors
+        defaultButtonTextColor = binding.startButton.textColors
+    }
+
+    private fun setupScreenComponents() {
+        title = getString(R.string.activity_main_title)
+        setupSwitch()
+        setupLoginButton()
     }
 
     private fun setupSwitch() {
@@ -40,12 +47,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun setupLoginButton() {
+        binding.startButton.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+    }
+
     private fun applyConstrast() {
         binding.root.background = getDrawable(R.color.backgroundDark)
         binding.loginAppNameText.setTextColor(Color.WHITE)
         binding.loginIntroductionText.setTextColor(Color.WHITE)
         binding.contrastSwitchText.setTextColor(Color.WHITE)
-        binding.loginButton.setTextColor(Color.WHITE)
+        binding.startButton.setTextColor(Color.WHITE)
     }
 
     private fun removeContrast() {
@@ -53,6 +66,6 @@ class MainActivity : AppCompatActivity() {
         binding.loginAppNameText.setTextColor(defaultTitleColor)
         binding.loginIntroductionText.setTextColor(defaultIntroductionColor)
         binding.contrastSwitchText.setTextColor(defaultSwitchTextColor)
-        binding.loginButton.setTextColor(defaultButtonTextColor)
+        binding.startButton.setTextColor(defaultButtonTextColor)
     }
 }
