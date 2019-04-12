@@ -6,6 +6,9 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 28
+    dataBinding {
+        enabled = true
+    }
     defaultConfig {
         applicationId "br.com.dextra.accessibility"
         minSdkVersion 22
