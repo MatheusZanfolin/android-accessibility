@@ -2,10 +2,11 @@
     <string name="app_name">Acessibilidade</string>
     <string name="activity_main_title">Bem vindo!</string>
     <string name="starting_button_text">Entrar</string>
-    <string name="starting_button_desc">Entrar no aplicativo</string>
+    <string name="starting_button_desc">entrar</string>
     <string name="starting_introduction">Aumentando o escopo \ndo seu app</string>
     <string name="starting_constrast_switch">Contraste</string>
     <string name="login_username_edit_hint">Username</string>
     <string name="login_password_edit_hint">Senha</string>
     <string name="login_button">Login</string>
+    <string name="login_button_desc">login</string>
 </resources>
