@@ -1,15 +1,17 @@
 package br.com.dextra.accessibility
 
+import android.app.Activity
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import androidx.databinding.DataBindingUtil
 import br.com.dextra.accessibility.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : Activity() {
     lateinit var binding: ActivityMainBinding
 
     lateinit var defaultIntroductionColor: ColorStateList

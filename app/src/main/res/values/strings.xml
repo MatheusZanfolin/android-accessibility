@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Acessibilidade</string>
     <string name="activity_main_title">Bem vindo!</string>
-    <string name="starting_button_text">Entrar</string>
+    <string name="starting_button_text">ENTRAR</string>
     <string name="starting_button_desc">entrar</string>
     <string name="starting_introduction">Aumentando o escopo \ndo seu app</string>
     <string name="starting_constrast_switch">Contraste</string>
