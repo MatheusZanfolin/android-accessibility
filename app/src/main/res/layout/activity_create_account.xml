@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/default_activity_bg"
+            tools:context=".CreateAccountActivity">
+
+        <EditText
+                android:id="@+id/create_account_username_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textColor="@color/login_edit_text"
+                android:textColorHint="@color/login_edit_text"
+                android:fontFamily="@font/cantarell"
+                android:padding="@dimen/login_edit_padding"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                android:nextFocusForward="@id/create_account_password_edit"
+                android:hint="@string/create_account_username_edit_hint"/>
+
+        <EditText
+                android:id="@+id/create_account_password_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:singleLine="true"
+                android:inputType="textPassword"
+                android:textColor="@color/login_edit_text"
+                android:textColorHint="@color/login_edit_text"
+                android:fontFamily="@font/cantarell"
+                android:clipToPadding="false"
+                android:padding="@dimen/login_edit_padding"
+                app:layout_constraintTop_toBottomOf="@id/create_account_username_edit"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                android:nextFocusForward="@id/create_account_dbz_edit"
+                android:hint="@string/create_account_password_edit_hint"/>
+
+        <TextView
+                android:id="@+id/create_account_dbz_edit_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:text="@string/create_account_dbz_edit_label"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:fontFamily="@font/cantarell"
+                app:layout_constraintTop_toTopOf="@id/create_account_dbz_edit"
+                app:layout_constraintBottom_toBottomOf="@id/create_account_dbz_edit"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                android:labelFor="@id/create_account_dbz_edit"/> <!-- Semantic property that indicates relation between views -->
+
+        <EditText
+                android:id="@+id/create_account_dbz_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:inputType="number"
+                android:text="@string/create_account_dbz_edit_defaut_text"
+                android:textAlignment="textEnd"
+                app:layout_constraintTop_toBottomOf="@id/create_account_password_edit"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/create_account_dbz_edit_label"
+
+                android:nextFocusForward="@id/create_account_infinity_edit"/>
+
+        <TextView
+                android:id="@+id/create_account_infinity_edit_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:text="@string/create_account_infinity_edit_label"
+                android:textSize="16sp"
+                android:textColor="#000"
+                android:fontFamily="@font/cantarell"
+                app:layout_constraintTop_toTopOf="@id/create_account_infinity_edit"
+                app:layout_constraintBottom_toBottomOf="@id/create_account_infinity_edit"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                android:labelFor="@id/create_account_dbz_edit"/> <!-- This property can also replace "android:hint" on EditText -->
+
+        <EditText
+                android:id="@+id/create_account_infinity_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                android:inputType="number"
+                android:text="@string/create_account_dbz_edit_defaut_text"
+                android:textAlignment="textEnd"
+                app:layout_constraintTop_toBottomOf="@id/create_account_dbz_edit"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/create_account_dbz_edit_label"
+
+                android:nextFocusForward="@id/create_account_sith_check"/>
+
+        <CheckBox
+                android:id="@+id/create_account_sith_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                app:layout_constraintTop_toBottomOf="@id/create_account_infinity_edit"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                android:textColorHint="#000"
+                android:hint="@string/create_account_sith_check_label"
+                android:nextFocusForward="@id/create_account_quiditch_check"/>
+
+        <CheckBox
+                android:id="@+id/create_account_quiditch_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin"
+                app:layout_constraintTop_toBottomOf="@id/create_account_sith_check"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                android:textColorHint="#000"
+                android:hint="@string/create_account_quiditch_check_label"
+                android:nextFocusForward="@id/create_account_button"/>
+
+        <Button
+                android:id="@+id/create_account_button"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_margin="@dimen/default_margin"
+                android:background="@drawable/login_button_bg"
+                android:text="@string/create_account_button_text"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:fontFamily="@font/cantarell"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                android:nextFocusForward="@id/create_account_username_edit"
+                android:contentDescription="@string/create_account_button_desc"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

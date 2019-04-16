@@ -6,5 +6,5 @@
     <color name="backgroundDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="login_edit_text">#000</color>
-    <color name="login_screen_bg">#d0ea9f</color>
+    <color name="default_activity_bg">#d0ea9f</color>
 </resources>

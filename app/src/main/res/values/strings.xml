@@ -1,15 +1,29 @@
 <resources>
     <string name="app_name">Acessibilidade</string>
+
     <string name="activity_main_title">Bem vindo!</string>
     <string name="starting_button_text">ENTRAR</string>
     <string name="starting_button_desc">entrar</string>
     <string name="starting_introduction">Aumentando o escopo \ndo seu app</string>
     <string name="starting_constrast_switch">Contraste</string>
+
     <string name="login_username_edit_hint">Username</string>
     <string name="login_password_edit_hint">Senha</string>
     <string name="login_button">Login</string>
     <string name="login_button_desc">login</string>
 
     <string name="login_fail_message">Login ou senha inválidos</string>
+    <string name="login_empty_input">Preencha todos os campos</string>
     <string name="create_account_link">Não sou cadastrado</string>
+
+    <string name="create_account_username_edit_hint">Username</string>
+    <string name="create_account_password_edit_hint">Senha</string>
+    <string name="create_account_dbz_edit_defaut_text">0</string>
+    <string name="create_account_dbz_edit_label">Esferas do Dragão:</string>
+    <string name="create_account_infinity_edit_defaut_text">0</string>
+    <string name="create_account_infinity_edit_label">Jóias do Infinito:</string>
+    <string name="create_account_button_desc">create account</string>
+    <string name="create_account_button_text">Criar conta</string>
+    <string name="create_account_sith_check_label">Não sou um Sith</string>
+    <string name="create_account_quiditch_check_label">Já joguei Quadribol</string>
 </resources>
