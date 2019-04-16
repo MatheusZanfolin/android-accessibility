@@ -4,7 +4,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#d0ea9f"
+            android:background="@color/login_screen_bg"
             android:focusable="true"
             android:focusableInTouchMode="true"
             tools:context=".LoginActivity">
@@ -16,16 +16,18 @@
                 android:layout_margin="@dimen/default_margin"
                 android:singleLine="true"
                 android:inputType="text"
-                android:hint="@string/login_username_edit_hint"
                 android:textColor="@color/login_edit_text"
                 android:textColorHint="@color/login_edit_text"
+                android:fontFamily="@font/cantarell"
                 android:padding="@dimen/login_edit_padding"
-                android:nextFocusForward="@id/password_edit"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent" app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintBottom_toTopOf="@+id/password_edit"
-                app:layout_constraintVertical_chainStyle="packed"/>
+                app:layout_constraintVertical_chainStyle="packed"
+
+                android:nextFocusForward="@id/password_edit"
+                android:hint="@string/login_username_edit_hint"/> <!-- Hints serve the same purpose as contentDescription -->
 
         <EditText
                 android:id="@+id/password_edit"
@@ -34,17 +36,19 @@
                 android:layout_margin="@dimen/default_margin"
                 android:singleLine="true"
                 android:inputType="textPassword"
-                android:hint="@string/login_password_edit_hint"
                 android:textColor="@color/login_edit_text"
                 android:textColorHint="@color/login_edit_text"
+                android:fontFamily="@font/cantarell"
                 android:clipToPadding="false"
                 android:padding="@dimen/login_edit_padding"
-                android:nextFocusForward="@id/login_button"
                 app:layout_constraintVertical_chainStyle="packed"
                 app:layout_constraintTop_toBottomOf="@+id/username_edit"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent" app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintBottom_toTopOf="@+id/login_button"/>
+                app:layout_constraintBottom_toTopOf="@+id/login_button"
+
+                android:nextFocusForward="@id/login_button"
+                android:hint="@string/login_password_edit_hint"/> <!-- Hints serve the same purpose as contentDescription -->
 
         <Button
                 android:id="@+id/login_button"
@@ -53,35 +57,32 @@
                 android:layout_margin="@dimen/default_margin"
                 android:text="@string/login_button"
                 android:textColor="#FFF"
+                android:textStyle="bold"
+                android:fontFamily="@font/cantarell"
                 android:background="@drawable/login_button_bg"
-                android:nextFocusForward="@id/username_edit"
-                android:contentDescription="@string/login_button_desc"
                 app:layout_constraintTop_toBottomOf="@+id/password_edit"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"/>
+                app:layout_constraintHorizontal_bias="0.5"
 
-        <Switch
-                android:id="@+id/background_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/default_margin"
-                android:backgroundTint="@color/colorPrimaryDark"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/background_switch_text"
-                app:layout_constraintHorizontal_chainStyle="packed"/>
+                android:nextFocusForward="@id/create_account_link"
+                android:contentDescription="@string/login_button_desc"/>
 
+        <!-- TextViews don't need to have hints or labels -->
         <TextView
-                android:id="@+id/background_switch_text"
+                android:id="@+id/create_account_link"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/default_margin"
-                android:text="@string/starting_constrast_switch"
-                android:textSize="20sp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/create_account_link"
+                android:textSize="18sp"
                 android:textColor="#000"
-                android:labelFor="@id/contrast_switch"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@+id/background_switch"
-                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"/>
+                android:fontFamily="@font/cantarell"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                android:nextFocusForward="@id/username_edit"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

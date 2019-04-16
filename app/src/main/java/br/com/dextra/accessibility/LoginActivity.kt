@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.setPadding
 import androidx.databinding.DataBindingUtil
@@ -29,33 +30,12 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setupScreenComponents() {
-        setupSwitch()
+        setupButton()
     }
 
-    private fun setupSwitch() {
-        binding.backgroundSwitch.isChecked = true
-        binding.backgroundSwitch.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                addBackground(binding.usernameEdit)
-                addBackground(binding.passwordEdit)
-            } else {
-                removeBackground(binding.usernameEdit)
-                removeBackground(binding.passwordEdit)
-            }
-            binding.usernameEdit.requestFocus()
+    private fun setupButton() {
+        binding.loginButton.setOnClickListener {
+            Toast.makeText(this, getString(R.string.login_fail_message), Toast.LENGTH_SHORT).show()
         }
-    }
-
-    private fun addBackground(editText: EditText) {
-        editText.background = getDrawable(R.drawable.login_edit_bg)
-        editText.setPadding(8)
-        editText.setTextColor(Color.WHITE)
-        editText.setHintTextColor(Color.WHITE)
-    }
-
-    private fun removeBackground(editText: EditText) {
-        editText.background = defaultEditBackground
-        editText.setTextColor(Color.BLACK)
-        editText.setHintTextColor(Color.BLACK)
     }
 }
