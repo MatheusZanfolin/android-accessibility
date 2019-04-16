@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.Drawable
+import android.graphics.drawable.TransitionDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
@@ -12,12 +13,14 @@ import androidx.databinding.DataBindingUtil
 import br.com.dextra.accessibility.databinding.ActivityMainBinding
 
 class MainActivity : Activity() {
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
-    lateinit var defaultIntroductionColor: ColorStateList
-    lateinit var defaultTitleColor: ColorStateList
-    lateinit var defaultSwitchTextColor: ColorStateList
-    lateinit var defaultButtonTextColor: ColorStateList
+    private lateinit var defaultIntroductionColor: ColorStateList
+    private lateinit var defaultTitleColor: ColorStateList
+    private lateinit var defaultSwitchTextColor: ColorStateList
+    private lateinit var defaultButtonTextColor: ColorStateList
+
+    val TRANSITION_TIME_MILIS = 500
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,18 +59,12 @@ class MainActivity : Activity() {
     }
 
     private fun applyConstrast() {
-        binding.root.background = getDrawable(R.color.backgroundDark)
-        binding.loginAppNameText.setTextColor(Color.WHITE)
-        binding.loginIntroductionText.setTextColor(Color.WHITE)
-        binding.contrastSwitchText.setTextColor(Color.WHITE)
-        binding.startButton.setTextColor(Color.WHITE)
+        val background = binding.root.background as TransitionDrawable
+        background.startTransition(TRANSITION_TIME_MILIS)
     }
 
     private fun removeContrast() {
-        binding.root.background = getDrawable(R.color.background)
-        binding.loginAppNameText.setTextColor(defaultTitleColor)
-        binding.loginIntroductionText.setTextColor(defaultIntroductionColor)
-        binding.contrastSwitchText.setTextColor(defaultSwitchTextColor)
-        binding.startButton.setTextColor(defaultButtonTextColor)
+        val background = binding.root.background as TransitionDrawable
+        background.reverseTransition(TRANSITION_TIME_MILIS)
     }
 }
