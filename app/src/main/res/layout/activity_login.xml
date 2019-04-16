@@ -68,15 +68,30 @@
                 android:nextFocusForward="@id/create_account_link"
                 android:contentDescription="@string/login_button_desc"/>
 
-        <!-- TextViews don't need to have hints or labels -->
+        <View
+                android:id="@+id/create_account_link_bg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:padding="@dimen/default_margin"
+                android:background="@drawable/create_account_link_bg"
+                app:layout_constraintTop_toTopOf="@id/create_account_link"
+                app:layout_constraintLeft_toLeftOf="@id/create_account_link"
+                app:layout_constraintRight_toRightOf="@id/create_account_link"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!-- TextViews don't need to have hints or labels, they're automatically read -->
+        <!-- It's recommended to have clear, shape, text and color differentiation -->
         <TextView
                 android:id="@+id/create_account_link"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
+                android:layout_marginBottom="16dp"
+                android:padding="8dp"
+                android:focusable="true"
+                android:clickable="true"
                 android:text="@string/create_account_link"
                 android:textSize="18sp"
-                android:textColor="#000"
+                android:textColor="#FFF"
                 android:fontFamily="@font/cantarell"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
