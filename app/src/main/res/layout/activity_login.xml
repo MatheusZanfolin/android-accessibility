@@ -27,7 +27,7 @@
                 app:layout_constraintVertical_chainStyle="packed"
 
                 android:nextFocusForward="@id/password_edit"
-                android:hint="@string/login_username_edit_hint"/> <!-- Hints serve the same purpose as contentDescription -->
+                android:hint="@string/login_username_edit_hint"/> <!-- Hints serve the same purpose as contentDescription, but for editables -->
 
         <EditText
                 android:id="@+id/password_edit"
@@ -47,8 +47,8 @@
                 app:layout_constraintRight_toRightOf="parent" app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintBottom_toTopOf="@+id/login_button"
 
-                android:nextFocusForward="@id/login_button"
-                android:hint="@string/login_password_edit_hint"/> <!-- Hints serve the same purpose as contentDescription -->
+                android:hint="@string/login_password_edit_hint"
+                android:nextFocusForward="@id/login_button"/> <!-- Defining focus order optimizes swipe navigation -->
 
         <Button
                 android:id="@+id/login_button"
@@ -68,7 +68,7 @@
                 android:nextFocusForward="@id/create_account_link_bg"
                 android:contentDescription="@string/login_button_desc"/>
 
-        <!-- It's recommended to have clear, shape, text and color differentiation -->
+        <!-- If views diverge in purpose, they should also be visually distinguishable by shape, size and color -->
         <View
                 android:id="@+id/create_account_link_bg"
                 android:layout_width="0dp"
@@ -77,6 +77,7 @@
                 android:focusable="true"
                 android:clickable="true"
                 android:background="@drawable/create_account_link_bg"
+                android:elevation="10dp"
                 app:layout_constraintTop_toTopOf="@id/create_account_link"
                 app:layout_constraintLeft_toLeftOf="@id/create_account_link"
                 app:layout_constraintRight_toRightOf="@id/create_account_link"
@@ -84,7 +85,7 @@
 
                 android:nextFocusForward="@id/username_edit"/>
 
-        <!-- TextViews don't need to have hints or labels, they're automatically read -->
+        <!-- TextViews don't need to have hints or labels, they're automatically read by text-to-speech programs -->
         <TextView
                 android:id="@+id/create_account_link"
                 android:layout_width="wrap_content"
@@ -95,6 +96,7 @@
                 android:textSize="18sp"
                 android:textColor="#FFF"
                 android:fontFamily="@font/cantarell"
+                android:elevation="12dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"/>

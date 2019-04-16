@@ -87,7 +87,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/create_account_infinity_edit"
                 app:layout_constraintLeft_toLeftOf="parent"
 
-                android:labelFor="@id/create_account_dbz_edit"/> <!-- This property can also replace "android:hint" on EditText -->
+                android:labelFor="@id/create_account_dbz_edit"/> <!-- This property can also replace "android:hint" on editables -->
 
         <EditText
                 android:id="@+id/create_account_infinity_edit"
