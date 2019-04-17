@@ -8,6 +8,7 @@
             android:background="@drawable/main_bg_transition"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:focusable="false"
             tools:context=".MainActivity">
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -49,6 +50,7 @@
                 android:text="@string/starting_button_text"
                 android:textStyle="bold"
                 android:fontFamily="@font/cantarell"
+                android:focusable="true"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
