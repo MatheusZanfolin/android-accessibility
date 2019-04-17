@@ -69,10 +69,23 @@
                 android:text="@string/create_account_dbz_edit_defaut_text"
                 android:textAlignment="textEnd"
                 app:layout_constraintTop_toBottomOf="@id/create_account_password_edit"
-                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/create_account_dbz_info_icon"
                 app:layout_constraintLeft_toRightOf="@id/create_account_dbz_edit_label"
 
                 android:nextFocusForward="@id/create_account_infinity_edit"/>
+
+        <ImageView
+                android:id="@+id/create_account_dbz_info_icon"
+                android:layout_margin="@dimen/default_margin"
+                android:tint="#000"
+                android:src="@android:drawable/ic_dialog_info"
+                app:layout_constraintTop_toTopOf="@id/create_account_dbz_edit"
+                app:layout_constraintBottom_toBottomOf="@id/create_account_dbz_edit"
+                app:layout_constraintRight_toRightOf="parent"
+
+                android:padding="12dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"/> <!-- Clickables must have at least 48dpx48dp of surface area -->
 
         <TextView
                 android:id="@+id/create_account_infinity_edit_label"
@@ -98,10 +111,24 @@
                 android:text="@string/create_account_dbz_edit_defaut_text"
                 android:textAlignment="textEnd"
                 app:layout_constraintTop_toBottomOf="@id/create_account_dbz_edit"
-                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/create_account_infinity_info_icon"
                 app:layout_constraintLeft_toRightOf="@id/create_account_dbz_edit_label"
 
                 android:nextFocusForward="@id/create_account_sith_check"/>
+
+        <ImageView
+                android:id="@+id/create_account_infinity_info_icon"
+                android:layout_margin="@dimen/default_margin"
+                android:tint="#000"
+                android:src="@android:drawable/ic_dialog_info"
+                app:layout_constraintTop_toTopOf="@id/create_account_infinity_edit"
+                app:layout_constraintBottom_toBottomOf="@id/create_account_infinity_edit"
+                app:layout_constraintRight_toRightOf="parent"
+
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"/> <!-- If the required size is too large, use padding to make the view
+                                                fit the desired size -->
 
         <CheckBox
                 android:id="@+id/create_account_sith_check"
