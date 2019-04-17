@@ -26,4 +26,15 @@
     <string name="create_account_button_text">Criar conta</string>
     <string name="create_account_sith_check_label">Não sou um Sith</string>
     <string name="create_account_quiditch_check_label">Já joguei Quadribol</string>
+    <string name="create_account_message_dialog_title">Porque informar isso?</string>
+    <string name="create_account_message_dialog_positive_button_text">OK</string>
+    <string name="create_account_message_dialog_dbz_message">Como descrito em nossos
+        termos de uso, planejamos aumentar o escopo de nosso app abrindo as portas ao público
+        Sayajin. É possível que tal medida acarrete em mudanças na experiência de uso, incluindo,
+        mas não restrito a, telas de loading que duram cinco episódios para terminar, por exemplo</string>
+    <string name="create_account_message_dialog_infinity_message">Como descrito em nossa política de
+        privacidade, usamos essa informação para prever a possibilidade de que um usuário do nosso app
+        porventura extermine metade da população do universo ao estalar os dedos. Buscamos sempre aprimorar
+        a usabilidade de nosso produto e acreditamos que ser transformado em poeira cósmica possa implicar
+        em graves déficits no cumprimento dessa meta</string>
 </resources>
