@@ -22,9 +22,7 @@
                 app:layout_constraintBottom_toTopOf="@id/login_introduction_text"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-
-                android:importantForAccessibility="no"
-                android:textSize="32sp"/>
+                android:textSize="40sp"/>
 
         <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/login_introduction_text"
@@ -37,9 +35,7 @@
                 app:layout_constraintBottom_toTopOf="@id/start_button"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-
-                android:textSize="16sp"
-                android:importantForAccessibility="no"/>
+                android:textSize="14sp"/>
 
         <Button
                 android:id="@+id/start_button"
@@ -54,9 +50,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-
-                android:contentDescription="@string/starting_button_desc"/>
+                app:layout_constraintRight_toRightOf="parent"/>
 
         <Switch
                 android:id="@+id/contrast_switch"
