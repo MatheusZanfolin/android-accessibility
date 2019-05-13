@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
     <androidx.constraintlayout.widget.ConstraintLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scrollbars="vertical"
             android:background="@color/default_activity_bg"
             tools:context=".CreateAccountActivity">
 
@@ -72,7 +72,7 @@
                 app:layout_constraintRight_toLeftOf="@id/create_account_dbz_info_icon"
                 app:layout_constraintLeft_toRightOf="@id/create_account_dbz_edit_label"
 
-                android:nextFocusForward="@id/create_account_infinity_edit"/>
+                android:nextFocusForward="@id/create_account_dbz_info_icon"/>
 
         <ImageView
                 android:id="@+id/create_account_dbz_info_icon"
@@ -83,6 +83,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/create_account_dbz_edit"
                 app:layout_constraintRight_toRightOf="parent"
 
+                android:nextFocusForward="@id/create_account_infinity_edit"
                 android:padding="12dp"
                 android:layout_width="48dp"
                 android:layout_height="48dp"/> <!-- Clickables must have at least 48dpx48dp of surface area -->
@@ -114,7 +115,7 @@
                 app:layout_constraintRight_toLeftOf="@id/create_account_infinity_info_icon"
                 app:layout_constraintLeft_toRightOf="@id/create_account_dbz_edit_label"
 
-                android:nextFocusForward="@id/create_account_sith_check"/>
+                android:nextFocusForward="@id/create_account_infinity_info_icon"/>
 
         <ImageView
                 android:id="@+id/create_account_infinity_info_icon"
@@ -125,10 +126,11 @@
                 app:layout_constraintBottom_toBottomOf="@id/create_account_infinity_edit"
                 app:layout_constraintRight_toRightOf="parent"
 
+                android:nextFocusForward="@id/create_account_sith_check"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:padding="12dp"/> <!-- If the required size is too large, use padding to make the view
-                                                fit the desired size -->
+                                            fit the desired size -->
 
         <CheckBox
                 android:id="@+id/create_account_sith_check"
@@ -170,6 +172,5 @@
 
                 android:contentDescription="@string/create_account_button_desc"
                 android:nextFocusForward="@id/create_account_username_edit"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout> <!-- TODO Separate this into three different segments -->
 </layout>
