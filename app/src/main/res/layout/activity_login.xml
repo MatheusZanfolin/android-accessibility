@@ -27,7 +27,7 @@
                 app:layout_constraintVertical_chainStyle="packed"
 
                 android:nextFocusForward="@id/password_edit"
-                android:hint="@string/login_username_edit_hint"/> <!-- Hints serve the same purpose as contentDescription, but for editables -->
+                android:hint="@string/login_username_edit_hint"/>
 
         <EditText
                 android:id="@+id/password_edit"
@@ -48,7 +48,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/login_button"
 
                 android:hint="@string/login_password_edit_hint"
-                android:nextFocusForward="@id/login_button"/> <!-- Defining focus order optimizes swipe navigation -->
+                android:nextFocusForward="@id/login_button"/>
 
         <Button
                 android:id="@+id/login_button"
@@ -68,7 +68,6 @@
                 android:nextFocusForward="@id/create_account_link_bg"
                 android:contentDescription="@string/login_button_desc"/>
 
-        <!-- If views diverge in purpose, they should also be visually distinguishable by shape, size and color -->
         <View
                 android:id="@+id/create_account_link_bg"
                 android:layout_width="0dp"
@@ -85,7 +84,6 @@
 
                 android:nextFocusForward="@id/username_edit"/>
 
-        <!-- TextViews don't need to have hints or labels, they're automatically read by text-to-speech programs -->
         <TextView
                 android:id="@+id/create_account_link"
                 android:layout_width="wrap_content"

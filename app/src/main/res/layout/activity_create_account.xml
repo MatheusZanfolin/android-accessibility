@@ -58,7 +58,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/create_account_dbz_edit"
                 app:layout_constraintLeft_toLeftOf="parent"
 
-                android:labelFor="@id/create_account_dbz_edit"/> <!-- Semantic property that indicates relation between views -->
+                android:labelFor="@id/create_account_dbz_edit"/>
 
         <EditText
                 android:id="@+id/create_account_dbz_edit"
@@ -86,7 +86,7 @@
                 android:nextFocusForward="@id/create_account_infinity_edit"
                 android:padding="12dp"
                 android:layout_width="48dp"
-                android:layout_height="48dp"/> <!-- Clickables must have at least 48dpx48dp of surface area -->
+                android:layout_height="48dp"/>
 
         <TextView
                 android:id="@+id/create_account_infinity_edit_label"
@@ -101,7 +101,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/create_account_infinity_edit"
                 app:layout_constraintLeft_toLeftOf="parent"
 
-                android:labelFor="@id/create_account_dbz_edit"/> <!-- This property can also replace "android:hint" on editables -->
+                android:labelFor="@id/create_account_dbz_edit"/>
 
         <EditText
                 android:id="@+id/create_account_infinity_edit"
@@ -129,8 +129,7 @@
                 android:nextFocusForward="@id/create_account_sith_check"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:padding="12dp"/> <!-- If the required size is too large, use padding to make the view
-                                            fit the desired size -->
+                android:padding="12dp"/>
 
         <CheckBox
                 android:id="@+id/create_account_sith_check"
@@ -172,5 +171,5 @@
 
                 android:contentDescription="@string/create_account_button_desc"
                 android:nextFocusForward="@id/create_account_username_edit"/>
-    </androidx.constraintlayout.widget.ConstraintLayout> <!-- TODO Separate this into three different segments -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

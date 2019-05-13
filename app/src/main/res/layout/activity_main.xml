@@ -24,7 +24,7 @@
                 app:layout_constraintRight_toRightOf="parent"
 
                 android:importantForAccessibility="no"
-                android:textSize="32sp"/> <!-- Always make sure your typography still works, even with large text -->
+                android:textSize="32sp"/>
 
         <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/login_introduction_text"
@@ -39,7 +39,7 @@
                 app:layout_constraintRight_toRightOf="parent"
 
                 android:textSize="16sp"
-                android:importantForAccessibility="no"/> <!-- This view is used only for aesthetic purposes -->
+                android:importantForAccessibility="no"/>
 
         <Button
                 android:id="@+id/start_button"
@@ -56,7 +56,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
 
-                android:contentDescription="@string/starting_button_desc"/> <!-- Brief explanation of this view's purpose -->
+                android:contentDescription="@string/starting_button_desc"/>
 
         <Switch
                 android:id="@+id/contrast_switch"
