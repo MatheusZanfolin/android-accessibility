@@ -14,7 +14,7 @@
 
     <string name="login_fail_message">Login ou senha inválidos</string>
     <string name="login_empty_input">Preencha todos os campos</string>
-    <string name="create_account_link">Não sou cadastrado</string>
+    <string name="create_account_link">NÃO SOU CADASTRADO</string>
 
     <string name="create_account_username_edit_hint">Username</string>
     <string name="create_account_password_edit_hint">Senha</string>
