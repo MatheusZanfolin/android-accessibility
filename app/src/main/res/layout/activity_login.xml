@@ -50,6 +50,23 @@
                 android:hint="@string/login_password_edit_hint"
                 android:nextFocusForward="@id/login_button"/> <!-- Defining focus order optimizes swipe navigation -->
 
+        <TextView
+                android:id="@+id/login_fail_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:textSize="16sp"
+                android:textColor="#db5e5e"
+                android:textStyle="bold"
+                android:fontFamily="@font/cantarell"
+                android:text="@string/login_fail_message"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@id/login_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+
+                android:accessibilityLiveRegion="polite"/> <!-- Assert non interrupting messages -->
+
         <Button
                 android:id="@+id/login_button"
                 android:layout_width="128dp"
