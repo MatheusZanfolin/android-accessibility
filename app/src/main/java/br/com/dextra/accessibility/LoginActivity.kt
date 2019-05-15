@@ -6,6 +6,8 @@ import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.animation.AlphaAnimation
+import android.view.animation.Animation
 import android.widget.EditText
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -37,7 +39,11 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setupLoginButton() {
         binding.loginButton.setOnClickListener {
-            Toast.makeText(this, getMessageByInput(), Toast.LENGTH_SHORT).show()
+            if (emptyInput()) {
+                Toast.makeText(this, getString(R.string.login_empty_input), Toast.LENGTH_SHORT).show()
+            } else {
+                binding.loginFailText.startAnimation(getFadingAnimation())
+            }
         }
     }
 
@@ -47,8 +53,12 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun getMessageByInput(): CharSequence {
-        return if (emptyInput()) getString(R.string.login_empty_input) else getString(R.string.login_fail_message)
+    private fun getFadingAnimation(): Animation {
+        return AlphaAnimation(0.0f, 1.0f).apply {
+            duration = 3000
+            repeatCount = 1
+            repeatMode = Animation.REVERSE
+        }
     }
 
     private fun emptyInput(): Boolean {
