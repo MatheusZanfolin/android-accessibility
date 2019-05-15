@@ -66,7 +66,7 @@
                 app:layout_constraintHorizontal_bias="0.5"
 
                 android:nextFocusForward="@id/create_account_link_bg"
-                android:contentDescription="@string/login_button_desc"/>
+                android:contentDescription="@string/login_button_desc"/> <!-- Never specify the type of the view. Screen readers are capable of knowing that -->
 
         <!-- If views diverge in purpose, they should also be visually distinguishable by shape, size and color -->
         <View
