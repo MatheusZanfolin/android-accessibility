@@ -59,8 +59,8 @@ class LoginActivity : AppCompatActivity() {
     private fun getFadingAnimation(): Animation {
         return AlphaAnimation(0.0f, 1.0f).apply {
             duration = 1500
-            fillAfter = true
-            isFillEnabled = true
+            fillAfter = true     // Assert that messages persist
+            isFillEnabled = true // in the layout, so that no information is lost
         }
     }
 
