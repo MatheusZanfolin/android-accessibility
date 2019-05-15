@@ -58,9 +58,9 @@ class LoginActivity : AppCompatActivity() {
 
     private fun getFadingAnimation(): Animation {
         return AlphaAnimation(0.0f, 1.0f).apply {
-            duration = 3000
-            repeatCount = 1
-            repeatMode = Animation.REVERSE
+            duration = 1500
+            fillAfter = true
+            isFillEnabled = true
         }
     }
 
