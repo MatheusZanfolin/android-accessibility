@@ -83,7 +83,6 @@ class MainActivity : Activity() {
 
     private fun fadeToDefault(view: TextView) {
         fade(view, Color.WHITE, getDefaultColor(view))
-
     }
 
     private fun fade(view: TextView, startColor: Int, endColor: Int) {

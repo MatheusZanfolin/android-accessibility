@@ -12,6 +12,11 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.setPadding
 import androidx.databinding.DataBindingUtil
 import br.com.dextra.accessibility.databinding.ActivityLoginBinding
+import android.R.attr.button
+import android.view.animation.Animation
+import android.view.animation.AlphaAnimation
+
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -37,7 +42,11 @@ class LoginActivity : AppCompatActivity() {
 
     private fun setupLoginButton() {
         binding.loginButton.setOnClickListener {
-            Toast.makeText(this, getMessageByInput(), Toast.LENGTH_SHORT).show()
+            if (emptyInput()) {
+                Toast.makeText(this, getString(R.string.login_empty_input), Toast.LENGTH_SHORT).show()
+            } else {
+                binding.loginFailText.startAnimation(getFadingAnimation())
+            }
         }
     }
 
@@ -47,8 +56,12 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun getMessageByInput(): CharSequence {
-        return if (emptyInput()) getString(R.string.login_empty_input) else getString(R.string.login_fail_message)
+    private fun getFadingAnimation(): Animation {
+        return AlphaAnimation(0.0f, 1.0f).apply {
+            duration = 1500
+            fillAfter = true     // Assert that messages persist
+            isFillEnabled = true // in the layout, so that no information is lost
+        }
     }
 
     private fun emptyInput(): Boolean {

@@ -196,7 +196,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
 
-                android:contentDescription="@string/create_account_button_desc"
-                android:nextFocusForward="@id/create_account_username_edit"/>
+                android:nextFocusForward="@id/create_account_username_edit"
+                android:contentDescription="@string/create_account_button_desc"/> <!-- Don't specify how to interact with the view.
+                                                                                       Switch or voice users don't navigate the app the same way we usually do -->
     </androidx.constraintlayout.widget.ConstraintLayout> <!-- TODO Separate this into three different segments -->
 </layout>
