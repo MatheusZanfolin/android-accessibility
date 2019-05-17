@@ -8,129 +8,155 @@
             android:background="@color/default_activity_bg"
             tools:context=".CreateAccountActivity">
 
-        <EditText
-                android:id="@+id/create_account_username_edit"
-                android:layout_width="0dp"
+        <RelativeLayout
+                android:id="@+id/container_login"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/default_margin"
-                android:singleLine="true"
-                android:inputType="text"
-                android:textColor="@color/login_edit_text"
-                android:textColorHint="@color/login_edit_text"
-                android:fontFamily="@font/cantarell"
-                android:padding="@dimen/login_edit_padding"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
 
-                android:nextFocusForward="@id/create_account_password_edit"
-                android:hint="@string/create_account_username_edit_hint"/>
+                android:focusable="true">
 
-        <EditText
-                android:id="@+id/create_account_password_edit"
-                android:layout_width="0dp"
+            <EditText
+                    android:id="@+id/create_account_username_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_margin"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:textColor="@color/login_edit_text"
+                    android:textColorHint="@color/login_edit_text"
+                    android:fontFamily="@font/cantarell"
+                    android:padding="@dimen/login_edit_padding"
+                    android:layout_alignParentTop="true"
+
+                    android:nextFocusForward="@id/create_account_password_edit"
+                    android:hint="@string/create_account_username_edit_hint"/>
+
+            <EditText
+                    android:id="@+id/create_account_password_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_margin"
+                    android:singleLine="true"
+                    android:inputType="textPassword"
+                    android:textColor="@color/login_edit_text"
+                    android:textColorHint="@color/login_edit_text"
+                    android:fontFamily="@font/cantarell"
+                    android:clipToPadding="false"
+                    android:padding="@dimen/login_edit_padding"
+                    android:layout_below="@id/create_account_username_edit"
+
+                    android:nextFocusForward="@id/create_account_dbz_edit"
+                    android:hint="@string/create_account_password_edit_hint"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/container_edit_texts"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/default_margin"
-                android:singleLine="true"
-                android:inputType="textPassword"
-                android:textColor="@color/login_edit_text"
-                android:textColorHint="@color/login_edit_text"
-                android:fontFamily="@font/cantarell"
-                android:clipToPadding="false"
-                android:padding="@dimen/login_edit_padding"
-                app:layout_constraintTop_toBottomOf="@id/create_account_username_edit"
+                app:layout_constraintTop_toBottomOf="@id/container_login"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
 
-                android:nextFocusForward="@id/create_account_dbz_edit"
-                android:hint="@string/create_account_password_edit_hint"/>
+                android:focusable="true">
 
-        <TextView
-                android:id="@+id/create_account_dbz_edit_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin"
-                android:text="@string/create_account_dbz_edit_label"
-                android:textSize="16sp"
-                android:textColor="#000"
-                android:fontFamily="@font/cantarell"
-                app:layout_constraintTop_toTopOf="@id/create_account_dbz_edit"
-                app:layout_constraintBottom_toBottomOf="@id/create_account_dbz_edit"
-                app:layout_constraintLeft_toLeftOf="parent"
+            <TextView
+                    android:id="@+id/create_account_dbz_edit_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:text="@string/create_account_dbz_edit_label"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/cantarell"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:layout_alignTop="@id/create_account_dbz_info_icon"
+                    android:layout_alignBottom="@id/create_account_dbz_info_icon"
 
-                android:labelFor="@id/create_account_dbz_edit"/> <!-- Semantic property that indicates relation between views -->
+                    android:labelFor="@id/create_account_dbz_edit"/> <!-- Semantic property that indicates relation between views -->
 
-        <EditText
-                android:id="@+id/create_account_dbz_edit"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin"
-                android:inputType="number"
-                android:text="@string/create_account_dbz_edit_defaut_text"
-                android:textAlignment="textEnd"
-                app:layout_constraintTop_toBottomOf="@id/create_account_password_edit"
-                app:layout_constraintRight_toLeftOf="@id/create_account_dbz_info_icon"
-                app:layout_constraintLeft_toRightOf="@id/create_account_dbz_edit_label"
+            <EditText
+                    android:id="@+id/create_account_dbz_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="@string/create_account_dbz_edit_defaut_text"
+                    android:textAlignment="textEnd"
+                    android:layout_toLeftOf="@id/create_account_dbz_info_icon"
+                    android:layout_toRightOf="@id/create_account_dbz_edit_label"
+                    android:layout_alignTop="@id/create_account_dbz_info_icon"
+                    android:layout_alignBottom="@id/create_account_dbz_info_icon"
 
-                android:nextFocusForward="@id/create_account_dbz_info_icon"/>
+                    android:nextFocusForward="@id/create_account_dbz_info_icon"/>
 
-        <ImageView
-                android:id="@+id/create_account_dbz_info_icon"
-                android:layout_margin="@dimen/default_margin"
-                android:tint="#000"
-                android:src="@android:drawable/ic_dialog_info"
-                app:layout_constraintTop_toTopOf="@id/create_account_dbz_edit"
-                app:layout_constraintBottom_toBottomOf="@id/create_account_dbz_edit"
-                app:layout_constraintRight_toRightOf="parent"
+            <ImageView
+                    android:id="@+id/create_account_dbz_info_icon"
+                    android:layout_margin="@dimen/default_margin"
+                    android:tint="#000"
+                    android:src="@android:drawable/ic_dialog_info"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
 
-                android:nextFocusForward="@id/create_account_infinity_edit"
-                android:padding="12dp"
-                android:layout_width="48dp"
-                android:layout_height="48dp"/> <!-- Clickables must have at least 48dpx48dp of surface area -->
+                    android:nextFocusForward="@id/create_account_infinity_edit"
+                    android:padding="12dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"/> <!-- Clickables must have at least 48dpx48dp of surface area -->
 
-        <TextView
-                android:id="@+id/create_account_infinity_edit_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin"
-                android:text="@string/create_account_infinity_edit_label"
-                android:textSize="16sp"
-                android:textColor="#000"
-                android:fontFamily="@font/cantarell"
-                app:layout_constraintTop_toTopOf="@id/create_account_infinity_edit"
-                app:layout_constraintBottom_toBottomOf="@id/create_account_infinity_edit"
-                app:layout_constraintLeft_toLeftOf="parent"
+            <TextView
+                    android:id="@+id/create_account_infinity_edit_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_margin"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:text="@string/create_account_infinity_edit_label"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/cantarell"
+                    android:gravity="center"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@id/create_account_infinity_info_icon"
+                    android:layout_alignBottom="@id/create_account_infinity_info_icon"
 
-                android:labelFor="@id/create_account_dbz_edit"/> <!-- This property can also replace "android:hint" on editables -->
+                    android:labelFor="@id/create_account_dbz_edit"/> <!-- This property can also replace "android:hint" on editables -->
 
-        <EditText
-                android:id="@+id/create_account_infinity_edit"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/default_margin"
-                android:inputType="number"
-                android:text="@string/create_account_dbz_edit_defaut_text"
-                android:textAlignment="textEnd"
-                app:layout_constraintTop_toBottomOf="@id/create_account_dbz_edit"
-                app:layout_constraintRight_toLeftOf="@id/create_account_infinity_info_icon"
-                app:layout_constraintLeft_toRightOf="@id/create_account_dbz_edit_label"
+            <EditText
+                    android:id="@+id/create_account_infinity_edit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="@string/create_account_dbz_edit_defaut_text"
+                    android:textAlignment="textEnd"
+                    android:layout_toLeftOf="@id/create_account_infinity_info_icon"
+                    android:layout_toRightOf="@id/create_account_infinity_edit_label"
+                    android:layout_alignTop="@id/create_account_infinity_info_icon"
+                    android:layout_alignBottom="@id/create_account_infinity_info_icon"
 
-                android:nextFocusForward="@id/create_account_infinity_info_icon"/>
+                    android:nextFocusForward="@id/create_account_infinity_info_icon"/>
 
-        <ImageView
-                android:id="@+id/create_account_infinity_info_icon"
-                android:layout_margin="@dimen/default_margin"
-                android:tint="#000"
-                android:src="@android:drawable/ic_dialog_info"
-                app:layout_constraintTop_toTopOf="@id/create_account_infinity_edit"
-                app:layout_constraintBottom_toBottomOf="@id/create_account_infinity_edit"
-                app:layout_constraintRight_toRightOf="parent"
+            <ImageView
+                    android:id="@+id/create_account_infinity_info_icon"
+                    android:layout_margin="@dimen/default_margin"
+                    android:tint="#000"
+                    android:src="@android:drawable/ic_dialog_info"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/create_account_dbz_info_icon"
 
-                android:nextFocusForward="@id/create_account_sith_check"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:padding="12dp"/> <!-- If the required size is too large, use padding to make the view
+                    android:nextFocusForward="@id/create_account_sith_check"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"/> <!-- If the required size is too large, use padding to make the view
                                             fit the desired size -->
+
+        </RelativeLayout>
+
+
+
 
         <CheckBox
                 android:id="@+id/create_account_sith_check"
