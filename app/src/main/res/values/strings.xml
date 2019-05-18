@@ -20,12 +20,14 @@
     <string name="create_account_password_edit_hint">Senha</string>
     <string name="create_account_dbz_edit_defaut_text">0</string>
     <string name="create_account_dbz_edit_label">Esferas do Dragão:</string>
+    <string name="create_account_dbz_info_desc">por que informar esferas do dragão</string>
     <string name="create_account_infinity_edit_defaut_text">0</string>
     <string name="create_account_infinity_edit_label">Jóias do Infinito:</string>
+    <string name="create_account_infinity_info_desc">por que informar jóias do infinito</string>
     <string name="create_account_button_desc">create account</string>
     <string name="create_account_button_text">Criar conta</string>
     <string name="create_account_sith_check_label">Não sou um Sith</string>
-    <string name="create_account_quiditch_check_label">Já joguei Quadribol</string>
+    <string name="create_account_quidditch_check_label">Jogo quadribol</string>
     <string name="create_account_message_dialog_title">Porque informar isso?</string>
     <string name="create_account_message_dialog_positive_button_text">OK</string>
     <string name="create_account_message_dialog_dbz_message">Como descrito em nossos
